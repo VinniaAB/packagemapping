@@ -6,6 +6,22 @@ For more information regarding the api, see https://commercial.packagemapping.co
 - composer
 
 ## Installation
+Add a repository to your composer.json like so:
+```json
+{
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/VinniaAB/packagemapping.git"
+    }
+  ]
+}
+```
+
+And then require the package with composer:
+```shell
+composer require vinnia/packagemapping
+```
 
 ## Usage
 ```php
