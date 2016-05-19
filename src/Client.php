@@ -96,7 +96,7 @@ class Client
      */
     public function getTrackList(array $searchParameters, array $allowedCarriers = [])
     {
-        return $this->client->request('POST', self::API_URL . '/GetCarrierCodeList', [
+        return $this->client->request('POST', self::API_URL . '/GetTrackList', [
             'headers' => [
                 'Accept' => self::CONTENT_TYPE_JSON,
                 'Content-Type' => self::CONTENT_TYPE_JSON,
