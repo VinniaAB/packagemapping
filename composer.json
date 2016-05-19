@@ -1,0 +1,28 @@
+{
+    "name": "vinnia/packagemapping",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Johan Björk",
+            "email": "johanimon@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=5.5.9",
+        "guzzlehttp/guzzle": "^6.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Vinnia\\PackageMapping\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Vinnia\\PackageMapping\\Tests\\": "tests/"
+        }
+    },
+    "require-dev": {
+        "codeception/codeception": "^2.1"
+    }
+}
