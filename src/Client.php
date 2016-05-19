@@ -16,24 +16,6 @@ class Client
     const API_URL = 'https://ws.packagemapping.com/Services/PackageMapping/ITrackService/rest/json';
     const CONTENT_TYPE_JSON = 'application/json; charset=utf-8';
 
-    const CARRIER_UPS = 'ups';
-    const CARRIER_USPS = 'usps';
-    const CARRIER_FEDEX = 'fedex';
-    const CARRIER_DHL = 'dhl';
-    const CARRIER_DHL_GLOBAL_MAIL = 'dhlglobalmail';
-    const CARRIER_CANADA_POST = 'canadapost';
-    const CARRIER_FDM = 'fdm';
-    const CARRIER_LANDMARK_GLOBAL = 'landmarkglobal';
-    const CARRIER_LASERSHIP = 'lasership';
-    const CARRIER_LONE_STAR_OVERNIGHT = 'lso';
-    const CARRIER_ONTRAC = 'ontrac';
-    const CARRIER_PUROLATOR = 'purolator';
-    const CARRIER_PUROPOST = 'puropost';
-    const CARRIER_RRD_INTL = 'rrdintl';
-    const CARRIER_SINGAPORE_POST = 'singpost';
-    const CARRIER_SPEE_DEE = 'speedee';
-    const CARRIER_UPS_MI = 'upsmi';
-
     /**
      * @var GuzzleClientInterface
      */
@@ -72,7 +54,7 @@ class Client
      * @param string[] $allowedCarriers
      * @return \Psr\Http\Message\ResponseInterface
      */
-    public function getCarrierCodeList($trackingNumber = '', array $allowedCarriers = [])
+    public function getCarrierCodeList($trackingNumber, array $allowedCarriers = [])
     {
         return $this->client->request('POST', self::API_URL . '/GetCarrierCodeList', [
             'headers' => [
@@ -90,7 +72,7 @@ class Client
     /**
      * See https://ws.packagemapping.com/Services/PackageMapping/ITrackService/rest/json/help/operations/GetTrackList
      *
-     * @param array $searchParameters
+     * @param SearchParameter[] $searchParameters
      * @param string[] $allowedCarriers
      * @return \Psr\Http\Message\ResponseInterface
      */
