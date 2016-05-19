@@ -19,7 +19,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Vinnia\\PackageMapping\\Tests\\": "tests/"
+            "Vinnia\\PackageMapping\\Tests\\": "tests/unit/"
         }
     },
     "require-dev": {

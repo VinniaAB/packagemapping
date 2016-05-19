@@ -26,12 +26,13 @@ composer require vinnia/packagemapping
 ## Usage
 ```php
 use Vinnia\PackageMapping\Client;
+use Vinnia\PackageMapping\Carrier;
 
 $client = Client::make('my-packagemapping-key');
 
 $carriersResponse = $client->getCarrierCodeList([
-    Client::CARRIER_UPS,
-    Client::CARRIER_USPS,
+    Carrier::UPS,
+    Carrier::USPS,
 ]);
 
 $data = json_decode((string) $carriersResponse->getBody(), $assoc = true);

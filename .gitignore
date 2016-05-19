@@ -28,3 +28,7 @@ composer.phar
 tests/_output/*
 tests/_support/*.php
 tests/_support/_generated
+
+tests/env.php
+
+tests/_output/*
