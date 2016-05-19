@@ -69,7 +69,7 @@ class Client
      * See https://ws.packagemapping.com/Services/PackageMapping/ITrackService/rest/json/help/operations/GetCarrierCodeList
      *
      * @param string $trackingNumber
-     * @param array $allowedCarriers
+     * @param string[] $allowedCarriers
      * @return \Psr\Http\Message\ResponseInterface
      */
     public function getCarrierCodeList($trackingNumber = '', array $allowedCarriers = [])
@@ -91,7 +91,7 @@ class Client
      * See https://ws.packagemapping.com/Services/PackageMapping/ITrackService/rest/json/help/operations/GetTrackList
      *
      * @param array $searchParameters
-     * @param array $allowedCarriers
+     * @param string[] $allowedCarriers
      * @return \Psr\Http\Message\ResponseInterface
      */
     public function getTrackList(array $searchParameters, array $allowedCarriers = [])
