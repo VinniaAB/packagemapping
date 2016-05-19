@@ -29,7 +29,7 @@ class ClientTest extends AbstractTest
     {
         parent::setUp();
 
-        $this->env = require __DIR__ . '/../env.php';
+        $this->env = require __DIR__ . '/../../env.php';
         $this->client = Client::make($this->env['web_service_key']);
     }
 

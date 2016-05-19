@@ -29,6 +29,6 @@ tests/_output/*
 tests/_support/*.php
 tests/_support/_generated
 
-tests/env.php
+env.php
 
 tests/_output/*
